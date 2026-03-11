@@ -1,65 +1,81 @@
-import Image from "next/image";
+import { Dithering } from "@paper-design/shaders-react";
+
+import Paragraph from "@/components/paragraph";
+import H1 from "@/components/h1";
+
+function Info() {
+  return (
+    <div className="text-foreground-dark mb-8 flex items-center justify-end px-4 md:mr-6">
+      <div className="max-w-md space-y-4 px-4 lg:max-w-lg">
+        <H1>Elia Franzella</H1>
+
+        <Paragraph className="mt-8">
+          I&apos;m a developer specializing in building highly scalable,
+          event-driven backend systems.
+        </Paragraph>
+
+        <Paragraph>
+          Over the course of 5 years I designed and developed modern backend
+          solutions within distributed and cloud-native software ecosystems
+          using the NestJS framework. I built, maintained and reformed RESTful,
+          gRPC and GraphQL APIs, monitoring and enhancing stability and
+          performance using tools like Instana and Kibana (ELK).
+        </Paragraph>
+
+        <Paragraph>
+          Feel free to reach out to me at{" "}
+          <a
+            href="mailto:franzella.elia@gmail.com"
+            className="text-strong-foreground-dark underline underline-offset-2"
+          >
+            franzella.elia@gmail.com
+          </a>
+          .
+        </Paragraph>
+
+        <div className="mt-8 flex items-center gap-4 text-sm transition-colors lg:text-base">
+          <a
+            href="https://www.github.com/nin93/"
+            className="focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark text-xs transition-colors xl:text-sm"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/elia-franzella-20a046234/"
+            className="focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark text-xs transition-colors xl:text-sm"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="flex min-h-screen">
+        <div className="flex w-3/4 flex-col justify-center lg:mb-24 xl:w-1/2">
+          <Info />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="w-1/4 lg:w-1/2">
+          <Dithering
+            className="h-full"
+            colorBack="#0d0f00"
+            colorFront="#770b03"
+            shape="simplex"
+            type="4x4"
+            size={4.6}
+            speed={0.86}
+            scale={0.8}
+            offsetX={1}
+            offsetY={0}
+          />
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
