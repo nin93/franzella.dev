@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-// import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 import { FONT_MONO, FONT_SANS, FONT_SERIF } from "@/fonts";
@@ -23,13 +22,9 @@ export default function RootLayout({
         className={`${FONT_SERIF.variable} ${FONT_SANS.variable} ${FONT_MONO.variable} bg-deep-black text-foreground-dark font-mono transition-colors`}
       >
         <div className="flex flex-col justify-between">
-          {/* <div className="min-h-screen"> */}
-          {/* <Header className="mt-8" /> */}
+          <main>{children}</main>
 
-          <main className="min-h-screen">{children}</main>
-          {/* </div> */}
-
-          <Footer></Footer>
+          <Footer />
         </div>
       </body>
     </html>

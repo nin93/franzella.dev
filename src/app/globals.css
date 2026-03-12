@@ -22,4 +22,13 @@
   --font-serif: var(--font-setup-serif);
   --font-sans: var(--font-setup-sans);
   --font-mono: var(--font-setup-mono);
+
+  --text-xs: 0.625rem;
+  --text-sm: 0.745rem;
+  --text-base: 0.775rem;
+  --text-lg: 0.9rem;
+  --text-xl: 1.025rem;
+  --text-2xl: 1.12rem;
+  --text-3xl: 1.35rem;
+  --text-4xl: 1.55rem;
 }
