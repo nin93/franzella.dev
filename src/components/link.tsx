@@ -10,11 +10,18 @@ export type LinkProps = {
   external?: boolean;
 };
 
-export default function Link({ children, href, className, icon }: LinkProps) {
+export default function Link({
+  children,
+  href,
+  className,
+  icon,
+  external,
+}: LinkProps) {
   return (
     <LinkNext
       href={href}
       className={`${className} focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
+      target={external ? "_blank" : "_self"}
     >
       {children}
       {icon}

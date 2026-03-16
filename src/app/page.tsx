@@ -45,14 +45,14 @@ function Info() {
 
       <div className="flex flex-wrap items-center gap-2 text-sm transition-colors md:gap-4 lg:text-base">
         <Link href="https://www.github.com/nin93/">
-          <Filled>
+          <Filled interactive>
             <Github className="fill-foreground-dark w-3" />
             GitHub
           </Filled>
         </Link>
 
         <Link href="https://www.linkedin.com/in/elia-franzella-20a046234/">
-          <Filled>
+          <Filled interactive>
             <Linkedin className="fill-foreground-dark w-3" />
             LinkedIn
           </Filled>
@@ -64,7 +64,7 @@ function Info() {
           href="resume/elia_franzella_cv_202603_en.pdf"
           filename="elia_franzella_cv_202603_en.pdf"
         >
-          <Filled>
+          <Filled interactive>
             <Download className="fill-foreground-dark w-3" />
             Download CV
           </Filled>
