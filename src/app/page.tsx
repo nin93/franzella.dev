@@ -1,27 +1,18 @@
-import { ArrowRight } from "lucide-react";
-
-import DitheringCanvas from "@/components/dithering-canvas";
 import DownloadLink from "@/components/download-link";
-import H1 from "@/components/h1";
-import H2 from "@/components/h2";
-import Header from "@/components/header";
-import LeftContainer from "@/components/left-container";
-import Link from "@/components/link";
-import Paragraph from "@/components/paragraph";
-import WithCanvas from "@/components/with-canvas";
+import Filled from "@/components/ui/filled";
+import H1 from "@/components/typography/h1";
+import H2 from "@/components/typography/h2";
 import Job from "@/components/job";
+import Link from "@/components/link";
+import Paragraph from "@/components/typography/paragraph";
+
+import Download from "@/icons/download.svg";
+import Github from "@/icons/github.svg";
+import Linkedin from "@/icons/linkedin.svg";
 
 import { JOBS } from "@/constants/jobs";
 
 function Info() {
-  const externalArrow = (
-    <>
-      <span className="inline-flex">
-        <ArrowRight className="-rotate-45" width={12} height={12}></ArrowRight>
-      </span>
-    </>
-  );
-
   return (
     <>
       <H1>Elia Franzella</H1>
@@ -52,22 +43,31 @@ function Info() {
         </Paragraph>
       </div>
 
-      <div className="flex items-center gap-4 text-sm transition-colors lg:text-base">
-        <Link href="https://www.github.com/nin93/" icon={externalArrow}>
-          GitHub
+      <div className="flex flex-wrap items-center gap-2 text-sm transition-colors md:gap-4 lg:text-base">
+        <Link href="https://www.github.com/nin93/">
+          <Filled>
+            <Github className="fill-foreground-dark w-3" />
+            GitHub
+          </Filled>
         </Link>
-        <Link
-          href="https://www.linkedin.com/in/elia-franzella-20a046234/"
-          icon={externalArrow}
-        >
-          LinkedIn
+
+        <Link href="https://www.linkedin.com/in/elia-franzella-20a046234/">
+          <Filled>
+            <Linkedin className="fill-foreground-dark w-3" />
+            LinkedIn
+          </Filled>
         </Link>
-        —
+
+        {"/"}
+
         <DownloadLink
           href="resume/elia_franzella_cv_202603_en.pdf"
           filename="elia_franzella_cv_202603_en.pdf"
         >
-          Download CV
+          <Filled>
+            <Download className="fill-foreground-dark w-3" />
+            Download CV
+          </Filled>
         </DownloadLink>
       </div>
     </>
@@ -77,35 +77,17 @@ function Info() {
 export default function Home() {
   return (
     <>
-      <WithCanvas
-        canvas={
-          <>
-            <DitheringCanvas
-              className="h-full"
-              colorBack="#0d0f00"
-              colorFront="#770b03"
-            />
-          </>
-        }
-      >
-        <LeftContainer className="min-h-screen w-full px-4">
-          <Header />
+      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-32">
+        <Info />
+      </div>
 
-          <div className="flex h-full flex-col justify-center space-y-8 pb-32">
-            <Info />
-          </div>
-        </LeftContainer>
+      <div className="border-muted-background-dark space-y-8 border-t py-8">
+        <H2>Working Experience</H2>
 
-        <LeftContainer className="w-full px-4">
-          <div className="border-muted-background-dark space-y-8 border-t pt-10">
-            <H2>Working Experience</H2>
-
-            {JOBS.map((props, i) => (
-              <Job key={`job_${i}`} {...props} />
-            ))}
-          </div>
-        </LeftContainer>
-      </WithCanvas>
+        {JOBS.map((props, i) => (
+          <Job key={`job_${i}`} {...props} />
+        ))}
+      </div>
     </>
   );
 }

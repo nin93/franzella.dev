@@ -5,6 +5,9 @@ import Footer from "@/components/footer";
 import { FONT_MONO, FONT_SANS, FONT_SERIF } from "@/fonts";
 
 import "./globals.css";
+import WithCanvas from "@/components/layout/with-canvas";
+import DitheringCanvas from "@/components/dithering-canvas";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,8 +24,22 @@ export default function RootLayout({
       <body
         className={`${FONT_SERIF.variable} ${FONT_SANS.variable} ${FONT_MONO.variable} bg-deep-black text-foreground-dark font-mono transition-colors`}
       >
-        <div className="flex flex-col justify-between">
-          <main>{children}</main>
+        <div className="flex w-full flex-col justify-between">
+          <WithCanvas
+            canvas={
+              <>
+                <DitheringCanvas
+                  className="h-full"
+                  colorBack="#0d0f00"
+                  colorFront="#770b03"
+                />
+              </>
+            }
+          >
+            <Header />
+
+            <main>{children}</main>
+          </WithCanvas>
 
           <Footer />
         </div>

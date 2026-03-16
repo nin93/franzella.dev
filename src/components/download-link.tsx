@@ -9,7 +9,7 @@ export type DownloadLinkProps = {
   filename: string;
 };
 
-export default function ResourceLink({
+export default function DownloadLink({
   href,
   className,
   filename,

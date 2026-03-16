@@ -28,7 +28,7 @@ export default function Header(props: HeaderProps) {
 
   return (
     <header
-      className={`m-0 flex justify-between py-6 text-sm md:text-base ${props.className}`}
+      className={`m-0 flex w-full justify-between py-6 text-sm md:text-base ${props.className}`}
     >
       <nav className="flex gap-x-6 lg:gap-x-10">
         {PATHS.map(({ href, label }) => {

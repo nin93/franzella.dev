@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import LinkNext from "next/link";
+
 export type LinkProps = {
   href: string;
   children: ReactNode;
@@ -10,13 +12,12 @@ export type LinkProps = {
 
 export default function Link({ children, href, className, icon }: LinkProps) {
   return (
-    <a
+    <LinkNext
       href={href}
       className={`${className} focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
-      target="_blank"
     >
       {children}
       {icon}
-    </a>
+    </LinkNext>
   );
 }

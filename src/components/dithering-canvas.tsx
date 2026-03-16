@@ -18,7 +18,7 @@ export default function DitheringCanvas({
       colorFront={colorFront}
       shape="simplex"
       type="4x4"
-      size={4.6}
+      size={3.572}
       speed={0.86}
       scale={0.8}
       offsetX={1}

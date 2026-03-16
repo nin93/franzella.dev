@@ -1,5 +1,5 @@
-import H3 from "./h3";
-import Paragraph from "./paragraph";
+import H3 from "./typography/h3";
+import Paragraph from "./typography/paragraph";
 
 export type JobProps = {
   role: string;
@@ -24,7 +24,7 @@ export default function Job({
         {role} — {company}
       </H3>
 
-      <div className="flex items-baseline justify-between gap-2">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
         <Paragraph>{location}</Paragraph>
 
         <span className="text-muted-foreground-dark text-sm md:text-base">
