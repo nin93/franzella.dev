@@ -10,8 +10,8 @@ export const PROJECTS: ProjectProps[] = [
     title: "www.stateofneptune.com",
     description:
       "State Of Neptune's official band website. Server side rendered single page application built with the Qwik framework. Hosted on Cloudflare Pages.",
-    href: "https://www.stateofneptune.com/",
-    sourceCodeHref: "https://github.com/stateofneptune/stateofneptune.com",
+    externalLink: "https://www.stateofneptune.com/",
+    href: "https://github.com/stateofneptune/stateofneptune.com",
     tech: [
       {
         label: "Qwik",
@@ -33,7 +33,6 @@ export const PROJECTS: ProjectProps[] = [
     description:
       "Library to work with most known probability distributions. Features pseudo-random number generator (PRNG) implementations, high-level APIs for repeatable random sampling and cumulative distribution functions (CDF).",
     href: "https://github.com/nin93/alea",
-    sourceCodeHref: "https://github.com/nin93/alea",
     tech: [
       {
         label: "Crystal",
@@ -47,7 +46,6 @@ export const PROJECTS: ProjectProps[] = [
     description:
       "Abstraction layer over genetic algorithm implementations. Fetures auto-iterations over generation advances and built-in genetic cross functions.",
     href: "https://github.com/nin93/talgene",
-    sourceCodeHref: "https://github.com/nin93/talgene",
     tech: [
       {
         label: "Crystal",
