@@ -45,11 +45,11 @@ export default function Pagination({
 
   return (
     <div
-      className={`${className} flex w-full items-center justify-center gap-12`}
+      className={`${className} flex w-full items-center justify-center gap-6 md:gap-12`}
     >
       <PaginationPrevious href={`?page=${Math.max(1, currentPage - 1)}`} />
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-6 md:gap-8">
         {hasLeftEllipsis ? (
           <Ellipsis size={12} className="text-muted-foreground-dark" />
         ) : (
