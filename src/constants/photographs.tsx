@@ -1,6 +1,6 @@
-import { PhotoProps } from "@/components/photo";
+import { PhotographProps } from "@/components/models/photograph";
 
-export const PHOTOS: PhotoProps[] = [
+export const PHOTOGRAPHS: PhotographProps[] = [
   {
     title:
       "Tangled In This Man-Made Slit Between The Observer And The Observable",

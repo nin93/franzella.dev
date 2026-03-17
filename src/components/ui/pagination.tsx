@@ -2,7 +2,7 @@
 
 import { ChevronLeft, ChevronRight, Ellipsis } from "lucide-react";
 
-import Link from "../link";
+import Link from "@/components/ui/link";
 
 export type PaginationProps = {
   className?: string;

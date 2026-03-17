@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 
 import Image from "next/image";
 
-import Paragraph from "./typography/paragraph";
-import Link from "./link";
-import H3 from "./typography/h3";
-import Filled from "./ui/filled";
+import Paragraph from "@/components/typography/paragraph";
+import Link from "@/components/ui/link";
+import H3 from "@/components/typography/h3";
+import Filled from "@/components/ui/filled";
 
 import Git from "@/icons/git.svg";
 import Globe from "@/icons/globe.svg";

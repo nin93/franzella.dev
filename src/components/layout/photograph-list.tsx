@@ -1,14 +1,14 @@
-import Photo, { PhotoProps } from "@/components/photo";
+import Photograph, { PhotographProps } from "@/components/models/photograph";
 
 export type PhotographListProps = {
-  photographs: PhotoProps[];
+  photographs: PhotographProps[];
 };
 
 export default function PhotographList({ photographs }: PhotographListProps) {
   return (
     <>
       {photographs.map((project, i) => (
-        <Photo
+        <Photograph
           key={`project_${i}`}
           className="border-muted-background-dark pb-8 not-last:border-b"
           {...project}

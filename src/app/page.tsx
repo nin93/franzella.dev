@@ -1,10 +1,10 @@
-import DownloadLink from "@/components/download-link";
-import Filled from "@/components/ui/filled";
+import Job from "@/components/models/job";
 import H1 from "@/components/typography/h1";
 import H2 from "@/components/typography/h2";
-import Job from "@/components/job";
-import Link from "@/components/link";
 import Paragraph from "@/components/typography/paragraph";
+import DownloadLink from "@/components/ui/download-link";
+import Filled from "@/components/ui/filled";
+import Link from "@/components/ui/link";
 
 import Download from "@/icons/download.svg";
 import Github from "@/icons/github.svg";

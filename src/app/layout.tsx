@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 
 import { FONT_MONO, FONT_SANS, FONT_SERIF } from "@/fonts";
 
-import "./globals.css";
 import WithCanvas from "@/components/layout/with-canvas";
-import DitheringCanvas from "@/components/dithering-canvas";
-import Header from "@/components/header";
+import DitheringCanvas from "@/components/models/dithering-canvas";
+import Header from "@/components/layout/header";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

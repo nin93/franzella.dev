@@ -1,5 +1,5 @@
-import H3 from "./typography/h3";
-import Paragraph from "./typography/paragraph";
+import H3 from "@/components/typography/h3";
+import Paragraph from "@/components/typography/paragraph";
 
 export type JobProps = {
   role: string;

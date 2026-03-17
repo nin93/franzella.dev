@@ -1,4 +1,4 @@
-import { ProjectProps } from "@/components/project";
+import { ProjectProps } from "@/components/models/project";
 
 import Cloudflare from "@/icons/cloudflare.svg";
 import Crystal from "@/icons/crystal.svg";

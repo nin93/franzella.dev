@@ -1,4 +1,4 @@
-import Project, { ProjectProps } from "../project";
+import Project, { ProjectProps } from "@/components/models/project";
 
 export type ProjectListProps = {
   projects: ProjectProps[];
