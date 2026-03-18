@@ -51,4 +51,16 @@ export const PHOTOGRAPHS: PhotographProps[] = [
     src: "/assets/photographs/miranda_that_ghost_just_isnt_holy_anymore.jpg",
     date: "November 2023",
   },
+  {
+    title: "Faint Flames Under Mending Silence",
+    medium: "Digital photography, shot on Fujifilm X-T30 II.",
+    src: "/assets/photographs/faint_flames_under_mending_silence.jpg",
+    date: "March 2024",
+  },
+  {
+    title: "Tales from a Self-Taught Century",
+    medium: "Digital photography, shot on Fujifilm X-T30 II.",
+    src: "/assets/photographs/tales_from_a_self_taught_century.jpg",
+    date: "November 2022",
+  },
 ];
