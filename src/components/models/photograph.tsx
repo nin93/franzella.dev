@@ -1,7 +1,12 @@
+import { useState } from "react";
+
 import Image from "next/image";
 
-import Paragraph from "@/components/typography/paragraph";
+import PhotographPreview from "@/components/models/photograph-preview";
 import H3 from "@/components/typography/h3";
+import Paragraph from "@/components/typography/paragraph";
+
+import Expand from "@/icons/expand.svg";
 
 export type PhotographProps = {
   className?: string;
@@ -18,22 +23,47 @@ export default function Photograph({
   medium,
   date,
 }: PhotographProps) {
+  const [isOpenPreview, setIsOpenPreview] = useState(false);
+
   return (
     <div className={`${className} space-y-4`}>
       <H3>{title}</H3>
 
-      <Image
-        className="w-full"
-        quality={100}
-        width={512}
-        height={288}
-        src={src}
-        alt={title}
-      />
+      <div
+        className="group relative"
+        onClick={() => {
+          setIsOpenPreview(true);
+        }}
+      >
+        <Image
+          className="w-full cursor-pointer"
+          width={512}
+          quality={100}
+          height={288}
+          src={src}
+          alt={title}
+        ></Image>
+
+        <span className="fill-strong-foreground-dark absolute right-0 bottom-0 m-5 cursor-pointer opacity-0 mix-blend-exclusion transition-opacity group-hover:opacity-100">
+          <Expand className="w-3" />
+        </span>
+      </div>
+
+      {isOpenPreview ? (
+        <PhotographPreview
+          onClick={() => setIsOpenPreview(false)}
+          src={src}
+          alt={title}
+        />
+      ) : (
+        <></>
+      )}
 
       <Paragraph>{medium}</Paragraph>
 
-      <Paragraph className="text-muted-foreground-dark">{date}</Paragraph>
+      <div className="flex flex-wrap items-baseline justify-between">
+        <Paragraph className="text-muted-foreground-dark">{date}</Paragraph>
+      </div>
     </div>
   );
 }
