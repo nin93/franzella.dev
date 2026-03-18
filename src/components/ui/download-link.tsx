@@ -18,7 +18,7 @@ export default function DownloadLink({
   return (
     <Link
       href={href}
-      className={`${className} focus-within:text-foreground-dark text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
+      className={`${className} text-muted-foreground-dark hover:text-foreground-dark transition-colors`}
       download={filename}
       target="_blank"
     >

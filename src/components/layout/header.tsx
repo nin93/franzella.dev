@@ -38,7 +38,7 @@ export default function Header(props: HeaderProps) {
             <Link
               href={href}
               key={`nav_${label}`}
-              className={`focus-within:text-foreground-dark hover:text-foreground-dark transition-colors ${isActive ? "text-foreground-dark" : "text-muted-foreground-dark"}`}
+              className={`hover:text-foreground-dark transition-colors ${isActive ? "text-foreground-dark" : "text-muted-foreground-dark"}`}
             >
               {label}
             </Link>
