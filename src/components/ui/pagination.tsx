@@ -16,7 +16,7 @@ type PaginationButtonProps = {
 
 function PaginationPrevious({ href }: PaginationButtonProps) {
   return (
-    <Link href={href} className="flex items-center gap-1 text-sm">
+    <Link href={href} className="flex items-center gap-1 p-2 text-sm">
       <ChevronLeft className="w-3 md:w-4" />
       Prev
     </Link>
@@ -25,7 +25,7 @@ function PaginationPrevious({ href }: PaginationButtonProps) {
 
 function PaginationNext({ href }: PaginationButtonProps) {
   return (
-    <Link href={href} className="flex items-center gap-1 text-sm">
+    <Link href={href} className="flex items-center gap-1 p-2 text-sm">
       Next
       <ChevronRight className="w-3 md:w-4" />
     </Link>
@@ -45,31 +45,33 @@ export default function Pagination({
 
   return (
     <div
-      className={`${className} flex w-full items-center justify-center gap-6 md:gap-12`}
+      className={`${className} flex w-full items-center justify-center gap-4 md:gap-8`}
     >
       <PaginationPrevious href={`?page=${Math.max(1, currentPage - 1)}`} />
 
-      <div className="flex items-center gap-6 md:gap-8">
+      <div className="flex items-center gap-2 md:gap-4">
         {hasLeftEllipsis ? (
-          <Ellipsis size={10} className="text-muted-foreground-dark" />
+          <Link href={`?page=1`} className="p-2 text-sm">
+            <Ellipsis size={10} />
+          </Link>
         ) : (
           <></>
         )}
 
         {leftPage ? (
-          <Link href={`?page=${leftPage}`} className="text-sm">
+          <Link href={`?page=${leftPage}`} className="p-2 text-sm">
             {leftPage}
           </Link>
         ) : (
           <></>
         )}
 
-        <span className="text-strong-foreground-dark text-sm">
+        <span className="text-strong-foreground-dark p-2 text-sm">
           {currentPage}
         </span>
 
         {rightPage ? (
-          <Link href={`?page=${rightPage}`} className="text-sm">
+          <Link href={`?page=${rightPage}`} className="p-2 text-sm">
             {rightPage}
           </Link>
         ) : (
@@ -77,7 +79,9 @@ export default function Pagination({
         )}
 
         {hasRightEllipsis ? (
-          <Ellipsis size={10} className="text-muted-foreground-dark" />
+          <Link href={`?page=${totalPages}`} className="p-2 text-sm">
+            <Ellipsis size={10} />
+          </Link>
         ) : (
           <></>
         )}
