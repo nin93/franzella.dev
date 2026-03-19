@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import DisableScroll from "@/components/layout/disable-scroll";
-import CirleNotch from "@/icons/circle-notch.svg";
+import Ring from "@/icons/180-ring.svg";
 import XMark from "@/icons/xmark.svg";
 
 export type PhotographPreviewProps = {
@@ -44,7 +44,7 @@ export default function PhotographPreview({
 
       {!isLoaded ? (
         <span className="flex grow justify-center">
-          <CirleNotch className="fill-muted-foreground-dark w-4 animate-spin" />
+          <Ring className="fill-muted-foreground-dark w-8" />
         </span>
       ) : (
         <></>
