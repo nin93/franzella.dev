@@ -42,7 +42,7 @@ export default function Photograph({
           height={288}
           src={src}
           alt={title}
-        ></Image>
+        />
 
         <span className="fill-strong-foreground-dark absolute right-0 bottom-0 m-5 cursor-pointer opacity-0 mix-blend-exclusion transition-opacity group-hover:opacity-100">
           <Expand className="w-3" />

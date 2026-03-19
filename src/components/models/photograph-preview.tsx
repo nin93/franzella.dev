@@ -2,8 +2,9 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import XMark from "@/icons/xmark.svg";
+import DisableScroll from "@/components/layout/disable-scroll";
 import CirleNotch from "@/icons/circle-notch.svg";
+import XMark from "@/icons/xmark.svg";
 
 export type PhotographPreviewProps = {
   src: string;
@@ -48,6 +49,8 @@ export default function PhotographPreview({
       ) : (
         <></>
       )}
+
+      <DisableScroll />
     </dialog>
   );
 }
