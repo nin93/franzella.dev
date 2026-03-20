@@ -20,25 +20,31 @@ function Info() {
       <div className="space-y-4">
         <Paragraph>
           I&apos;m a developer specializing in building highly scalable,
-          event-driven backend systems.
+          event-driven applications.
         </Paragraph>
 
         <Paragraph>
-          Over the course of 5 years I designed and developed modern backend
-          solutions within distributed and cloud-native software ecosystems
-          using the NestJS framework. I built, maintained and reformed RESTful,
-          gRPC and GraphQL APIs, monitoring and enhancing stability and
-          performance using tools like Instana and Kibana (ELK).
+          I started my journey as a Physics student at the University of
+          Palermo, getting involved in mathematical modeling and simulation
+          computing in the C programming language. Over the course of the years
+          I worked in distributed and even-driven environments, building up my
+          knowledge in back-end systems -- now I&apos;m leaning into full-stack
+          development, with an eye over security.
+        </Paragraph>
+
+        <Paragraph>
+          I like to play with noise and randomness -- as a programmer, as a
+          musician and as a photographer.
         </Paragraph>
 
         <Paragraph>
           Feel free to reach out to me at{" "}
-          <a
+          <Link
             href="mailto:franzella.elia@gmail.com"
             className="text-strong-foreground-dark underline underline-offset-2"
           >
             franzella.elia@gmail.com
-          </a>
+          </Link>
           .
         </Paragraph>
       </div>
@@ -77,7 +83,7 @@ function Info() {
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-12">
+      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-14">
         <Info />
       </div>
 
