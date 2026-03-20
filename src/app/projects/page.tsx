@@ -7,14 +7,14 @@ import { PROJECTS } from "@/constants/projects";
 
 import usePage from "@/hooks/use-page";
 
-const perPage = 3;
-const totalPages = Math.ceil(PROJECTS.length / perPage);
+const PROJECTS_PER_PAGE = 2;
+const totalPages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
 
 export default function Projects() {
   const currentPage = usePage(totalPages);
-  const offset = perPage * (currentPage - 1);
+  const offset = PROJECTS_PER_PAGE * (currentPage - 1);
 
-  const projects = PROJECTS.slice(offset, offset + perPage);
+  const projects = PROJECTS.slice(offset, offset + PROJECTS_PER_PAGE);
 
   return (
     <>

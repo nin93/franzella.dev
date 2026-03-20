@@ -7,14 +7,14 @@ import { PHOTOGRAPHS } from "@/constants/photographs";
 
 import usePage from "@/hooks/use-page";
 
-const perPage = 3;
-const totalPages = Math.ceil(PHOTOGRAPHS.length / perPage);
+const PHOTOGRAPHS_PER_PAGE = 2;
+const totalPages = Math.ceil(PHOTOGRAPHS.length / PHOTOGRAPHS_PER_PAGE);
 
 export default function Photography() {
   const currentPage = usePage(totalPages);
-  const offset = perPage * (currentPage - 1);
+  const offset = PHOTOGRAPHS_PER_PAGE * (currentPage - 1);
 
-  const photographs = PHOTOGRAPHS.slice(offset, offset + perPage);
+  const photographs = PHOTOGRAPHS.slice(offset, offset + PHOTOGRAPHS_PER_PAGE);
 
   return (
     <>
