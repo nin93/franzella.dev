@@ -88,7 +88,7 @@ export default function Home() {
       </div>
 
       <div className="border-muted-background-dark space-y-8 border-t pt-8 pb-24">
-        <H2>Working Experience</H2>
+        <H2>Work Experience</H2>
 
         {JOBS.map((props, i) => (
           <Job key={`job_${i}`} {...props} />
