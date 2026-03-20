@@ -33,7 +33,7 @@ export default function PhotographPreview({
       </button>
 
       <Image
-        className={`${isLoaded ? "w-360" : "h-0 w-0"} m-auto`}
+        className={`${!isLoaded ? "w-0" : ""} m-auto`}
         onLoad={() => setIsLoaded(true)}
         quality={100}
         width={1440}
