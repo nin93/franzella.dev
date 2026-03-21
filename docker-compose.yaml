@@ -1,0 +1,13 @@
+services:
+  webapp:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+  server:
+    build:
+      context: nginx
+    depends_on:
+      - webapp
+    ports:
+      - 8080:80
