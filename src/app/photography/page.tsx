@@ -3,7 +3,7 @@
 import PaginatedList from "@/components/layout/paginated-list";
 import PhotographList from "@/components/layout/photograph-list";
 
-import { PHOTOGRAPHS } from "@/constants/photographs";
+import { PHOTOGRAPHS } from "@/app/photography/constants/photographs";
 
 import usePage from "@/hooks/use-page";
 

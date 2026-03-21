@@ -3,7 +3,7 @@
 import PaginatedList from "@/components/layout/paginated-list";
 import ProjectList from "@/components/layout/project-list";
 
-import { PROJECTS } from "@/constants/projects";
+import { PROJECTS } from "@/app/projects/constants/projects";
 
 import usePage from "@/hooks/use-page";
 
