@@ -5,20 +5,20 @@ import Job from "@/components/models/job";
 
 import { JOBS } from "@/constants/jobs";
 
-export default function Home() {
+export default function Me() {
   return (
     <>
-      <div className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-14">
+      <section className="flex min-h-[calc(100vh-65px)] flex-col justify-center space-y-8 pb-14">
         <Info />
-      </div>
+      </section>
 
-      <div className="border-muted-background-dark space-y-8 border-t pt-8 pb-24">
+      <section className="border-muted-background-dark space-y-8 border-t pt-8 pb-24">
         <H2>Work Experience</H2>
 
         {JOBS.map((props, i) => (
           <Job key={`job_${i}`} {...props} />
         ))}
-      </div>
+      </section>
     </>
   );
 }
