@@ -36,10 +36,10 @@ export default function Photograph({
         }}
       >
         <Image
-          className="w-full cursor-pointer"
-          width={512}
+          className="aspect-3/2 w-full cursor-pointer object-cover"
+          width={544}
+          height={363}
           quality={100}
-          height={288}
           src={src}
           alt={title}
         />

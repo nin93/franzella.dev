@@ -44,9 +44,9 @@ export default function Project({
       <H3>{title}</H3>
 
       <Image
-        className="w-full"
-        width={512}
-        height={288}
+        className="aspect-3/2 w-full object-cover"
+        width={544}
+        height={363}
         src={src}
         alt={title}
       />
