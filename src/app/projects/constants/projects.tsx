@@ -11,7 +11,7 @@ export const PROJECTS: ProjectProps[] = [
   {
     title: "www.stateofneptune.com",
     description:
-      "State Of Neptune's official band website. Server side rendered single page application built with the Qwik framework. Hosted on Cloudflare Pages.",
+      "State Of Neptune's official band website. Single Page Application built with the Qwik framework. Hosted on Cloudflare Pages.",
     externalLink: "https://www.stateofneptune.com/",
     href: "https://github.com/stateofneptune/stateofneptune.com",
     tech: [
