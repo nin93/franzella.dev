@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
+
 import { Suspense } from "react";
 
 import ProjectsPage from "@/components/layout/projects-page";
 import H2 from "@/components/typography/h2";
 
 const PROJECTS_PER_PAGE = 2;
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Software by Elia Franzella. View websites, tools and applications.",
+};
 
 export default function Projects() {
   return (

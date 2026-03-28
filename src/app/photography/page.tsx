@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
+
 import { Suspense } from "react";
 
 import PhotographsPage from "@/components/layout/photographs-page";
 import H2 from "@/components/typography/h2";
 
 const PHOTOGRAPHS_PER_PAGE = 2;
+
+export const metadata: Metadata = {
+  title: "Photography",
+  description: "Photography by Elia Franzella.",
+};
 
 export default function Photography() {
   return (
