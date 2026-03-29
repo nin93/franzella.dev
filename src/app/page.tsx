@@ -16,7 +16,7 @@ export default function Me() {
         <H2>Work Experience</H2>
 
         {JOBS.map((props, i) => (
-          <Job key={`job_${i}`} {...props} />
+          <Job key={`job_${i}`} className="space-y-2" {...props} />
         ))}
       </section>
     </>
