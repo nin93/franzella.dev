@@ -38,7 +38,7 @@ export default function Info() {
           Feel free to reach out to me at{" "}
           <Link
             href="mailto:franzella.elia@gmail.com"
-            className="text-strong-foreground-dark underline underline-offset-2"
+            className="text-foreground-strong underline-offset-2 hover:underline"
           >
             franzella.elia@gmail.com
           </Link>
@@ -49,14 +49,14 @@ export default function Info() {
       <div className="flex flex-wrap items-center gap-2 text-sm transition-colors md:gap-4 lg:text-base">
         <Link href="https://www.github.com/nin93/">
           <Filled interactive>
-            <Github className="fill-foreground-dark w-3" />
+            <Github className="fill-foreground w-3" />
             GitHub
           </Filled>
         </Link>
 
         <Link href="https://www.linkedin.com/in/elia-franzella-20a046234/">
           <Filled interactive>
-            <Linkedin className="fill-foreground-dark w-3" />
+            <Linkedin className="fill-foreground w-3" />
             LinkedIn
           </Filled>
         </Link>
@@ -68,7 +68,7 @@ export default function Info() {
           filename="elia_franzella_cv_202603_en.pdf"
         >
           <Filled interactive>
-            <Download className="fill-foreground-dark w-3" />
+            <Download className="fill-foreground w-3" />
             Download CV
           </Filled>
         </DownloadLink>

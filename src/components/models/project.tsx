@@ -56,9 +56,7 @@ export default function Project({
       <div className="flex flex-wrap gap-2">
         {tech.map((tech, i) => (
           <Filled key={`project_${title}_tech_${i}`}>
-            <span className="fill-foreground-dark w-3 md:w-3.5">
-              {tech.icon}
-            </span>
+            <span className="fill-foreground w-3 md:w-3.5">{tech.icon}</span>
             {tech.label}
           </Filled>
         ))}
@@ -67,7 +65,7 @@ export default function Project({
       <div className="flex flex-wrap gap-2 md:gap-4">
         <Link href={href} className="text-xs md:text-base" external>
           <Filled interactive>
-            <Git className="fill-foreground-dark w-3 md:w-3.5" />
+            <Git className="fill-foreground w-3 md:w-3.5" />
             Source code
           </Filled>
         </Link>
@@ -75,7 +73,7 @@ export default function Project({
         {externalLink && externalPathname ? (
           <Link href={externalLink} className="text-xs md:text-base" external>
             <Filled interactive>
-              <Globe className="fill-foreground-dark w-3 md:w-3.5" />
+              <Globe className="fill-foreground w-3 md:w-3.5" />
               {externalPathname}
             </Filled>
           </Link>

@@ -9,7 +9,7 @@ export default function ThemeToggler() {
   return (
     <>
       <button
-        className="hover:bg-muted-background-light dark:hover:bg-muted-background-dark flex h-9 w-9 cursor-pointer items-center justify-center rounded-md transition-colors"
+        className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-md"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {theme === "dark" ? <SunIcon size={18} /> : <MoonIcon size={18} />}

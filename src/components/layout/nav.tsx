@@ -15,7 +15,7 @@ export default function Nav() {
         <Link
           href={href}
           key={`nav_${label}`}
-          className={`hover:text-foreground-dark transition-colors ${href === currentPath ? "text-foreground-dark" : "text-muted-foreground-dark"}`}
+          className={`hover:text-foreground-strong transition-colors ${href === currentPath ? "text-foreground-strong" : "text-foreground-dimmed"}`}
         >
           {label}
         </Link>

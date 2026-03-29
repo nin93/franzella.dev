@@ -44,7 +44,7 @@ export default function Photograph({
           alt={title}
         />
 
-        <span className="fill-strong-foreground-dark absolute right-0 bottom-0 m-5 cursor-pointer opacity-0 mix-blend-exclusion transition-opacity group-hover:opacity-100">
+        <span className="fill-foreground-strong absolute right-0 bottom-0 m-5 cursor-pointer opacity-0 mix-blend-exclusion transition-opacity group-hover:opacity-100">
           <Expand className="w-3" />
         </span>
       </div>
@@ -62,7 +62,7 @@ export default function Photograph({
       <Paragraph>{medium}</Paragraph>
 
       <div className="flex flex-wrap items-baseline justify-between">
-        <Paragraph className="text-muted-foreground-dark">{date}</Paragraph>
+        <Paragraph className="text-foreground-dimmed">{date}</Paragraph>
       </div>
     </div>
   );

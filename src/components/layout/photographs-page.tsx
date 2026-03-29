@@ -24,7 +24,7 @@ export default function PhotographsPage({ perPage }: PhotographListProps) {
         {photographs.map((photograph, i) => (
           <Photograph
             key={`project_${i}`}
-            className="border-muted-background-dark pb-8 not-last:border-b"
+            className="border-background-lighten pb-8 not-last:border-b"
             {...photograph}
           />
         ))}

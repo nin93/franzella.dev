@@ -48,7 +48,7 @@ export default function PaginationController({
           <></>
         )}
 
-        <span className="text-strong-foreground-dark p-2 text-sm">
+        <span className="text-foreground-strong p-2 text-sm">
           {currentPage}
         </span>
 
@@ -61,7 +61,10 @@ export default function PaginationController({
         )}
 
         {hasRightEllipsis ? (
-          <Link href={`?page=${totalPages}`} className="p-2 text-sm">
+          <Link
+            href={`?page=${totalPages}`}
+            className="text-foreground-dimmed p-2 text-sm"
+          >
             <Ellipsis size={10} />
           </Link>
         ) : (

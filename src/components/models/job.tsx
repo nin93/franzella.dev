@@ -27,7 +27,7 @@ export default function Job({
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <Paragraph>{location}</Paragraph>
 
-        <span className="text-muted-foreground-dark text-sm md:text-base">
+        <span className="text-foreground-muted text-sm md:text-base">
           {start} ~ {finish || "present"}
         </span>
       </div>

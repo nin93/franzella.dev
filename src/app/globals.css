@@ -1,23 +1,31 @@
 @import "tailwindcss";
 
+:root {
+  --pitch-black: #0c0909;
+  --burnt-coffee-bean: #1c1515;
+  --coffee-bean: #261c1c;
+  --dark-garnet: #700c0c;
+  --black-cherry: #5a0303;
+  --blue-slate: #6a6b83;
+  --platinum: #dedede;
+  --silver: #b8b8b8;
+  --grey-olive: #8d8c8c;
+  --dim-grey: #615f5f;
+  --lavender-blush: #f6e8ea;
+}
+
 @theme inline {
-  --color-deep-black: #0d0f00;
-  --color-deep-red: #750a03;
+  /* --color-deep-black: #0d0f00; */
+  /* --color-deep-red: #750a03; */
 
-  --color-foreground-light: var(--color-zinc-700);
-  --color-foreground-dark: var(--color-zinc-300);
+  --color-foreground: var(--silver);
+  --color-foreground-strong: var(--platinum);
+  --color-foreground-dimmed: var(--grey-olive);
+  --color-foreground-muted: var(--dim-grey);
 
-  --color-muted-foreground-light: var(--color-zinc-400);
-  --color-muted-foreground-dark: var(--color-zinc-500);
-
-  --color-strong-foreground-light: var(--color-zinc-950);
-  --color-strong-foreground-dark: var(--color-zinc-50);
-
-  --color-background-light: var(--color-zinc-100);
-  --color-background-dark: var(--color-zinc-900);
-
-  --color-muted-background-light: var(--color-zinc-200);
-  --color-muted-background-dark: var(--color-zinc-800);
+  --color-background: var(--pitch-black);
+  --color-background-strong: var(--burnt-coffee-bean);
+  --color-background-lighten: var(--coffee-bean);
 
   --font-serif: var(--font-setup-serif);
   --font-sans: var(--font-setup-sans);

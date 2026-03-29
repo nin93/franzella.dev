@@ -12,7 +12,7 @@ export default function Me() {
         <Info />
       </section>
 
-      <section className="border-muted-background-dark space-y-8 border-t pt-8 pb-24">
+      <section className="border-background-lighten space-y-8 border-t pt-8 pb-24">
         <H2>Work Experience</H2>
 
         {JOBS.map((props, i) => (

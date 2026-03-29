@@ -8,7 +8,7 @@ export type ParagraphProps = {
 export default function Paragraph({ children, className }: ParagraphProps) {
   return (
     <p
-      className={`${className} text-foreground-dark text-justify text-sm leading-relaxed wrap-anywhere md:text-base`}
+      className={`${className} text-justify text-sm leading-relaxed wrap-anywhere md:text-base`}
     >
       {children}
     </p>

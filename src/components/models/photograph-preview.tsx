@@ -26,7 +26,7 @@ export default function PhotographPreview({
       open
     >
       <button
-        className="fill-muted-foreground-dark hover:fill-strong-foreground-dark fixed top-4 right-4 cursor-pointer p-4 transition-colors"
+        className="fill-foreground-dimmed hover:fill-foreground-strong fixed top-4 right-4 cursor-pointer p-4 transition-colors"
         onClick={onClick}
       >
         <XMark className="w-3" />
@@ -44,7 +44,7 @@ export default function PhotographPreview({
 
       {!isLoaded ? (
         <span className="flex grow justify-center">
-          <Ring className="fill-muted-foreground-dark w-8" />
+          <Ring className="fill-foreground-muted w-8" />
         </span>
       ) : (
         <></>

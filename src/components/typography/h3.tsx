@@ -6,7 +6,7 @@ export type H3Props = {
 
 export default function H3({ children }: H3Props) {
   return (
-    <h3 className="text-strong-foreground-dark font-mono text-lg font-semibold lg:text-xl">
+    <h3 className="text-foreground-strong font-mono text-lg font-semibold lg:text-xl">
       {children}
     </h3>
   );

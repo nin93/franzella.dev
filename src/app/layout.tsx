@@ -22,15 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${FONT_SERIF.variable} ${FONT_SANS.variable} ${FONT_MONO.variable} bg-deep-black text-foreground-dark font-mono transition-colors`}
+        className={`${FONT_SERIF.variable} ${FONT_SANS.variable} ${FONT_MONO.variable} bg-background text-foreground font-mono transition-colors`}
       >
         <WithCanvas
           canvas={
             <>
               <DitheringCanvas
                 className="h-full"
-                colorBack="#0d0f00"
-                colorFront="#770b03"
+                colorBack="#0c0909"
+                colorFront="#700c0c"
               />
             </>
           }
