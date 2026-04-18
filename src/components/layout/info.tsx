@@ -62,7 +62,7 @@ export default function Info() {
 
         {"/"}
 
-        <Link href="https://nin93.github.io/curriculum_vitae/elia_franzella_cv_dev.pdf">
+        <Link href="https://cv.franzella.dev" external>
           <Filled interactive>
             <Download className="fill-foreground w-3" />
             Download CV
